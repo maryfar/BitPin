@@ -1,0 +1,46 @@
+@mixin background-image($url) {
+  background-image: url("#{$url}") !important;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin background-curve($color) {
+  background-size: cover;
+  -webkit-background-size: cover;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  &:after {
+    content: "";
+    width: 200%;
+    height: 0;
+    padding-top: 200%;
+    border-radius: 100%;
+    background: $color;
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.bg-image-1 {
+  @include background-image("./assets/images/bg1.jpg");
+}
+
+.bg-image-2 {
+  @include background-image("./assets/images/bg2.jpg");
+}
+
+.curve-bg-login {
+  @include background-curve(rgba(255, 216, 151));
+}
+.curve-bg-register {
+  @include background-curve(rgba(215, 241, 240, 255));
+}
+
+@media screen and (min-width: 910px) and (max-width: 1100px) {
+  .bg-image-2 {
+    width: 60%;
+  }
+}

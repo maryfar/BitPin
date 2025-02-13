@@ -1,0 +1,38 @@
+
+@use "./assets/scss/base/typography";
+
+*,
+::before,
+::after body {
+  font-family: IRANSansX, serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cdced7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c4c3c9;
+}
+
+.rmdp-container {
+  width: 100%;
+}
+
+.slick-slide > div {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-prev {
+  width: 30px;
+  height: 30px;
+}

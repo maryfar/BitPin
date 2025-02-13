@@ -1,0 +1,8 @@
+@import "@fontsource/inter";
+@import "tailwindcss";
+
+*,
+::before,
+::after body {
+  font-family: IRANSansX, serif;
+}
